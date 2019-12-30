@@ -23,36 +23,80 @@
 
 <!-- navbar -->
 <!-- TODO: shrink the navbar height to minimum on scroll -->
-  <nav class="navbar">
+  <nav class="navbar" id="home">
     <div class="container brackets">
-      <img src="img/yanay logo.png" class="image logo" alt="yanay's logo" srcset=""></a>
-      <a>ABOUT</a>
-      <a>PORTFOLIO</a>
-      <a>SKILLS</a>
-      <a>CONTACT ME</a>
+      <a href="/dist" style="display: block;"><img src="img/yanay logo.png" class="image logo" alt="yanay's logo" srcset=""></img></a>
+      <a href="#about">ABOUT</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#contact">CONTACT ME</a>
     </div>
   </nav>
 
-  <section class="section1">
+
     <header class="header">
       <div class="container-top">
         <div class="left">
-          <h1 class="h1section1">
+          <h1 class="h1header">
             HEY, I AM YANAY
           </h1>
-          <h2 class="h2section1">
+          <h2 class="h2header">
             WEB <span>DEVELOPER</span>
           </h2>
         </div>
         <div class="right">
           <img src="img/yanay img.png" alt="yanay's head" class="yhead">
-        </div>
+        </img>
       </div>
     </header>
+
+
+  <section class="section" id="about">
+    <div class="container-second blue">
+      <article>
+        <label>
+          <h2 class="labels"><span>01</span>ABOUT</h2>
+        </label>
+        <div class="wrapper">
+          <p>I’m a web developer and graphic designer living in Tel-Aviv, Israel. I spend my days in many different areas of web development from front end engineering (HTML, CSS, and Javascript) to WordPress website building, digital accessibility, user experience, SEO and visual design.</p>
+          <p>I’m extremely passionate about web development and design in all it’s forms and helping small businesses and artists build and improve their online presence.</p>
+          <p>Aside from web development, I enjoy spending my time with my life partner and cat, baking bread, taking photos and playing music with friends.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section>
+  <section class="section" id="portfolio">
+    <div class="container-third">
+      <article>
+        <label>
+          <h2 class="labels"><span>02</span>PORTFOLIO</h2>
+        </label>
+        <!-- TODO: create work image carousel -->
+      </article>
+    </div>
+  </section>
 
+  <section class="section" id="skills">
+    <div class="container-fourth blue">
+      <article>
+        <label>
+          <h2 class="labels"><span>03</span>SKILLS</h2>
+        </label>
+        <!-- TODO: create skills levels -->
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container-fifth">
+      <article>
+        <label>
+          <h2 class="labels"><span>04</span>CONTACT ME</h2>
+        </label>
+        <!-- TODO: create contact form -->
+      </article>
+    </div>
   </section>
 
 
@@ -62,7 +106,10 @@
 
 
 
-
+  <button onclick="topFunction()"
+          class="btn"
+          id="topBtn"
+          title="Go to top">TOP</button>
 
   <script>
   if ('serviceWorker' in navigator) {
