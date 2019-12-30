@@ -23,9 +23,9 @@ html {
 div.container {
   /* font-family: Raleway; */
   margin: 0 auto;
-	padding: 2em 1em;
+	padding: .9em 1em 0 1em;
   text-align: right;
-  height: 48px;
+  height: 40px;
 }
 
 div.container a {
@@ -73,10 +73,10 @@ div.brackets a:hover:before, div.brackets a:hover:after
 }
 
 .logo {
-  width: 250px;
+  width: 190px;
   position: absolute;
-  left: 15px;
-  top: 5px;
+  left: 8%;
+  top: 0;
 }
 h1 {
   font-weight: 100;
@@ -439,7 +439,7 @@ button#topBtn:hover {
 /* make the nav stick */
 /* Make sure the nav is always at least 3em high */
 nav {
-  min-height: 3em;
+  min-height: 1em;
   width: 100%;
   background-color: #fff;
   opacity: .9;
@@ -458,4 +458,9 @@ html:not([data-scroll='0']) nav {
 
   /* This box-shadow will help sell the floating effect */
   box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+}
+
+
+#contact {
+  /* position: absolute; */
 }
