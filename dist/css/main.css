@@ -10,13 +10,13 @@
 /* ==========================================================================
     Base styles: opinionated defaults
    ========================================================================== */
+* { box-sizing: border-box; }
 
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
   font-family: sans-serif;
-  box-sizing: border-box;
 }
 
 /* the navbar */
@@ -461,6 +461,133 @@ html:not([data-scroll='0']) nav {
 }
 
 
-#contact {
+/* #contact { */
   /* position: absolute; */
+/* } */
+
+/* Carousel */
+/* use this insted ? https://codepen.io/desandro/pen/wjeBpp */
+/* or add 3 more photos */
+.carouselContainer {
+  position: absolute;
+  left: 45%;
 }
+.scene {
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  position: relative;
+  width: 250px;
+  height: 190px;
+  margin: 40px auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 200px;
+  height: 190px;
+  left: 10px;
+  top: 10px;
+  border: 2px solid black;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.carousel__cell:nth-child(1) {background-image: url("/img/mockups/everyday investments responsive.png");background-size: cover;}
+.carousel__cell:nth-child(2) {background-image: url("/img/mockups/fata\ morgana.jpg");background-size: cover;}
+.carousel__cell:nth-child(3) {background-image: url("/img/mockups/fata\ morgana\ responsive.png");background-size: cover;}
+.carousel__cell:nth-child(4) {background-image: url("/img/mockups/shanimal.jpg");background-size: cover;}
+.carousel__cell:nth-child(5) {background-image: url("/img/mockups/shanimal\ responsive.png");background-size: cover;}
+.carousel__cell:nth-child(6) {background-image: url("/img/mockups/yaeli\ shochat.jpg");background-size: cover;}
+
+/* .carousel__cell:nth-child(9n+1) { background: hsla(  0, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+2) { background: hsla( 40, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+3) { background: hsla( 80, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+4) { background: hsla(120, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+5) { background: hsla(160, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+6) { background: hsla(200, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+7) { background: hsla(240, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+8) { background: hsla(280, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+0) { background: hsla(320, 100%, 50%, 0.8); } */
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
+/* .carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); } */
+
+
+.previous-button {
+  position: absolute;
+  right: 350px;
+  height: 140px;
+}
+.next-button {
+  position: absolute;
+  left: 350px;
+  height: 140px;
+}
+
+/* show card 5 */
+/* .carousel.is-next {
+  transform: translateZ(-288px) rotateY(-160deg);
+} */
+
+/* test flip card */
+/* .scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg)
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+} */
